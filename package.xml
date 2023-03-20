@@ -6,18 +6,13 @@
         <members>WizardController</members>
         <members>DoubleStackController</members>
         <members>SecurityInApex</members>
-        <members>MyController</members>
-        <members>AccountController</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>EditTopAccount</members>
         <members>WizardAcc</members>
-        <members>WizardOpp</members>
+        <members>WizardOpp</members>r
         <members>DoubleStack</members>
-        <members>AccountPage</members>
-        <members>AccountPage2</members>
-        <members>AccountController</members>
         <name>ApexPage</name>
     </types>
     <types>

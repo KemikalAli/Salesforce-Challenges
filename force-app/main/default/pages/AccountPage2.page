@@ -1,0 +1,8 @@
+<!-- Challenges 3 -->
+<apex:page controller="MyController" tabStyle="Account">
+  <apex:form >
+  	<apex:pageBlock title="Account">
+      <apex:inputField value="{!account.name}"/>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

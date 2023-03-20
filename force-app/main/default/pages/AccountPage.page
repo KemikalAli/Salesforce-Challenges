@@ -1,0 +1,42 @@
+<!-- Challenges 1 2 4 5 6-->
+<apex:page standardController="Account" recordSetVar="Accounts" showHeader="false" renderAs="PDF">
+  <apex:pageMessages />
+  	<apex:form >
+  		<apex:pageBlock title="Accounts" >
+     	    <apex:pageBlockButtons >
+               <apex:commandButton action="{!Previous}" value="Previous"/>
+               <apex:commandButton action="{!Next}" value="Next"/>
+			</apex:pageBlockButtons>
+    	
+            <apex:pageBlockSection >
+                <apex:pageBlockTable title="Account Information" value="{!Accounts}" var="acc">
+                    <apex:column title="Name">
+                  <apex:outputField value="{!acc.Name}"/>
+                    </apex:column>
+                     <apex:column title="AccountNumber">
+                  <apex:outputField value="{!acc.AccountNumber}"/>
+                    </apex:column>>
+                     <apex:column title="Type">
+                  <apex:outputField value="{!acc.Type}"/>
+                    </apex:column>
+                     <apex:column title="Industry">    
+                  <apex:outputField value="{!acc.Industry}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+<!--  #6             <apex:commandButton action="{!URLFOR($Action.Account.Name,Id)}" Value="Welcome" onclick="Here is your account information"/>  -->
+			</apex:pageBlockButtons>
+            <apex:pageBlockSection >
+              <apex:pageBlockTable title="About Me" value="{!Account}" var="abtm">
+                  <p>
+                      <apex:outputText value="{!$Label.About_me}" style="font-weight:bold"/>
+                  </p>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+         </apex:pageBlock>
+  </apex:form>
+  <style type= "text/css">
+     p { font-weight: bold; }
+  </style>
+</apex:page>
